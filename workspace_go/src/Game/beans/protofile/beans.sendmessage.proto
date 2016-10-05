@@ -1,0 +1,20 @@
+package beans;
+import "beans.devmessage.proto";
+import "beans.useroptmessage.proto";
+
+message SendMessage{
+    enum MessageTypeId{
+        DEV_GYROSCOPE = 0; //陀螺仪信息
+        USER_OPTION = 1; //用户操作代码
+    }
+    required string tocken = 1;
+    required MessageTypeId messageId = 2;
+    optional DevMessage deviceMessage = 3;
+    optional UesrOptionMessage userOption = 4;
+    // oneof Bean{
+    //     DevMessage deviceMessage = 3;
+    //     UesrOptionMessage userOption = 4;
+    // }
+}
+//protoc --go_out=. beans.devmessage.proto
+//./pbjs ../../../../assets/protofile/beans.devmessage.proto -t commonjs > ../../../../assets/beans/beans.devmessage.js

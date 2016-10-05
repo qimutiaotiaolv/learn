@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>支付测试</title>
+</head>
+<!-- 1ca91be15055bd450519c1851bd7c52c -->
+<!-- 13850b34233c2d19a58e7b14622f1d42 -->
+<!-- e68c04e827005f5e784a47eb76bf8d6a -->
+<script type="text/javascript">
+	alert("BBBB");
+</script>
+<body>
+	<form id="alipaysubmit" name="alipaysubmit" action="https://mapi.alipay.com/gateway.do?_input_charset=utf-8" method="get" style='display:none;'>
+			<input type="hidden" name="_input_charset" value="utf-8">
+			<input type="hidden" name="body" value="为测试人员充值0.02元">
+			<input type="hidden" name="notify_url" value="http://192.168.199.120:8088/payment/notify">
+			<input type="hidden" name="out_trade_no" value="ababab">
+			<input type="hidden" name="partner" value="2088411430532533">
+			<input type="hidden" name="payment_type" value="1">
+			<input type="hidden" name="return_url" value="http://192.168.199.120:8088/payment/return">
+			<input type="hidden" name="seller_email" value="xunbaivip@163.com">
+			<input type="hidden" name="service" value="alipay.wap.create.direct.pay.by.user">
+			<input type="hidden" name="subject" value="罚款了">
+			<input type="hidden" name="total_fee" value="0.02">
+			<input type="hidden" name="sign" value="52dad6850ea5eae28ab7da3e288847a7">
+			<input type="hidden" name="sign_type" value="MD5">
+		</form>
+		<script>
+			document.forms['alipaysubmit'].submit();
+		</script>
+</body>
+</html>
+
+<!-- _input_charset=utf-8&body=用户充值测试,交易金额：0.01元&defaultbank=CMB&notify_url=http://127.0.0.1:8888/alipay/notify&out_trade_no=orderID&partner=2088411430532533&payment_type=1&paymethod=bankPay&return_url=http://127.0.0.1:8888/alipay/return&seller_email=xunbaivip@163.com&service=create_direct_pay_by_user&subject=用户充值测试&total_fee=0.019gf0hfngi1vuslpcwkp0lia77ysgmmc7 -->

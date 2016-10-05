@@ -1,0 +1,16 @@
+package beans;
+message DevMessage{
+    optional float angle_alpha = 1 [default = 0.0];
+    optional float angle_beta = 2 [default = 0.0];
+    optional float angle_gamma = 3 [default = 0.0];
+    optional float acce_x = 4 [default = 0.0];
+    optional float acce_y = 5 [default = 0.0];
+    optional float acce_z = 6 [default = 0.0];
+    optional float acce_alpha = 7 [default = 0.0];
+    optional float acce_beta = 8 [default = 0.0];
+    optional float acce_gamma = 9 [default = 0.0];
+}
+//protoc --go_out=. beans.devmessage.proto
+
+
+

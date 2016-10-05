@@ -1,0 +1,26 @@
+//protoc --go_out=. beans.devmessage.proto
+//./pbjs ../../../../assets/protofile/beans.devmessage.proto -t commonjs > ../../../../assets/beans/beans.devmessage.js
+package messages;
+
+message RoomMessage{
+	optional string room_id = 1;
+	optional int32 room_type = 2;
+	optional string game_id = 3;
+	optional string country_id = 4;
+	optional string arear_id = 5;
+	optional string region_id = 6;
+	optional string city_id = 7;
+	optional string isp_id = 8;
+	optional string ip_region = 9;
+	optional int32 max_playercount = 10;
+	optional int32 cur_playercount = 11;
+	optional float longitude = 13; 
+	optional float latitude = 14;
+	optional string device_info = 15;
+	repeated string player_tocken_array = 12; //当前房间玩家 
+}
+
+message UserMessage{
+	optional string user_id = 1;
+	optional string password = 2;
+}

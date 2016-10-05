@@ -1,0 +1,4 @@
+package beans;
+message UesrOptionMessage{
+    optional int32 userOpt = 1;
+}
